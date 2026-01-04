@@ -55,7 +55,7 @@ public class Manager {
 
     public static void updateYML(LocalPlayer player) {
         if (failLoadingFile(player)) return;
-        Map<String, Object> data = new HashMap<>();
+        Map<Integer, Object> data = new HashMap<>();
         int index = 1;
 
         for (BlockPos block : BLOCKS) {
@@ -64,7 +64,7 @@ public class Manager {
             coords.put("y", block.getY());
             coords.put("z", block.getZ());
 
-            data.put(String.valueOf(index), coords);
+            data.put(index, coords);
             index++;
         }
 
